@@ -2,10 +2,62 @@
     propriedade: valor;
 } */
 
+/* Cada primeiro elemento filho de um elemento pai */
+
 p:first-child{
     color: aquamarine
 }
 
+/* Cada ultimo elemento filho de um elemento pai */
+
 p:last-child{
     color: blue
+}
+
+/* Elementos que não tenham irmãos */
+
+p:only-child{
+    color: red;
+}
+
+/* Estiliza todos os elementos exceto os que correspondam a seleção específicada */
+
+/* p:not(.negado){
+    color: blue;
+} */
+
+/* Apenas elementos impáres */
+
+li:nth-child(odd){
+    color: red;
+}
+
+/* Apenas elementos pares */
+
+li:nth-child(even){
+    color: blue;
+}
+
+/* Range, de tal a tal elemento, caso queira de um elemento ao ultimo basta apagar o segundo nth-child */
+
+li:nth-child(n+4):nth-child(-n+6){
+    color: blueviolet;
+}
+
+/* De tanto em tanto elementos */
+
+li:nth-child(3n){
+    background-color: aqua;
+}
+
+/* Um elemento em espcífico */
+
+li:nth-child(8){
+    background-color: brown;
+}
+
+/* O mesmo que o nth-child, mas conta do ultimo elemento para o primeiro */
+
+li:nth-last-child(3){
+    background-color: chocolate;
 }
